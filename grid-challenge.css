@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  header { 
+    background-color: black;
+  }
+
+  aside{
+    display: none;
+    background-color: orangered;
+  }
+
+  nav{
+    background-color: orange;
+  }
+
+  main{
+    background-color: grey;
+  }
+
+  footer{
+    background-color:black;
+  }
+
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.2fr 3fr 0.5fr;
+    grid-gap: 5px ;
+  }  
+
+
+  @media screen and (min-width: 768px) {
+    body{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows:  1fr 1.2fr 3fr 1fr;
+        display:grid;
+        grid-template-areas: 
+            "header header header header"
+            "aside nav nav nav"
+            "aside main main main"
+            "aside main main main"
+            "footer footer footer footer";
+        grid-gap: 5px;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    aside {
+        display: unset;
+        grid-area: aside;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+  }
+
+  
+  
